@@ -1,0 +1,416 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor & Specialist Directory — JaroMed & Diagnostic Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .founder-card {
+        background: var(--surface);
+        border: 1px solid var(--accent);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(12px);
+        margin-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .founder-badge {
+        display: inline-block;
+        background: var(--accent);
+        color: #05070b;
+        font-weight: 700;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.65rem;
+        border-radius: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.5rem;
+      }
+
+      .directory-filters {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0 3rem;
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1.25rem;
+        border: 1px solid var(--surface-border);
+        background: var(--surface);
+        color: var(--text-secondary);
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--accent);
+        color: #05070b;
+        border-color: var(--accent);
+      }
+
+      .doctors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.75rem;
+        margin-bottom: 4rem;
+      }
+
+      .doctor-card {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(12px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .doctor-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+
+      .doctor-header {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .doctor-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--surface-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .doctor-info h3 {
+        font-size: 1.15rem;
+        margin: 0 0 0.25rem;
+        color: var(--text-primary);
+      }
+
+      .doctor-spec {
+        color: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .doctor-details {
+        margin-bottom: 1.5rem;
+      }
+
+      .detail-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .detail-row svg {
+        width: 16px;
+        height: 16px;
+        stroke: var(--text-secondary);
+        flex-shrink: 0;
+      }
+
+      .doctor-card .button {
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Navigation Bar -->
+    <header class="page-nav">
+      <div class="logo">
+        <img
+          src="jaromed-symbol.png"
+          alt="JaroMed Logo"
+          style="width: 32px; height: 32px; object-fit: contain;"
+        />
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+          <span>JaroMed<strong class="accent">& Diagnostic Center</strong></span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a class="button button-outline" href="index.html">← Back to Home</a>
+        <a class="button button-outline" href="services.html">Services</a>
+        <a class="button button-solid" href="portal.html">Patient Portal</a>
+      </nav>
+    </header>
+
+    <main class="specialty-detail-container">
+      <div class="detail-header">
+        <span class="specialty-tag">Medical Staff</span>
+        <h1>Doctor & Specialist Directory</h1>
+        <p class="lead-text">
+          Meet our team of licensed physicians, specialists, and radiologists providing expert medical evaluations at JaroMed & Diagnostic Center.
+        </p>
+      </div>
+
+      <!-- Founder & Lead Director Feature -->
+      <div class="founder-card">
+        <div class="doctor-avatar" style="width: 72px; height: 72px;">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div>
+          <span class="founder-badge">Founder & Lead Medical Director</span>
+          <h2 style="margin: 0 0 0.35rem; font-size: 1.4rem;">Dr. Jocelyn Jaro</h2>
+          <p style="margin: 0; color: var(--text-secondary); font-size: 0.95rem;">
+            Leading clinical excellence and diagnostic precision across all departments at JaroMed & Diagnostic Center in Dasmariñas, Cavite.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="directory-filters">
+        <button class="filter-btn active" onclick="filterDoctors('all', this)">All Specialists</button>
+        <button class="filter-btn" onclick="filterDoctors('pediatrics', this)">Pediatrics & OB-GYN</button>
+        <button class="filter-btn" onclick="filterDoctors('radiology', this)">Radiology & Sonology</button>
+        <button class="filter-btn" onclick="filterDoctors('family', this)">Family & Community Medicine</button>
+      </div>
+
+      <!-- Doctor Directory Cards -->
+      <div class="doctors-grid">
+        <!-- Doctor 1: Pediatrics -->
+        <div class="doctor-card" data-category="pediatrics">
+          <div>
+            <div class="doctor-header">
+              <div class="doctor-avatar">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3>Dr. Kharla Angela Arevalo</h3>
+                <span class="doctor-spec">Pediatrician / Neonatologist</span>
+              </div>
+            </div>
+
+            <div class="doctor-details">
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Consultation by Appointment</span>
+              </div>
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Newborn Care & Child Wellness</span>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-outline">Book Consultation</a>
+        </div>
+
+        <!-- Doctor 2: OB-Gynecologist -->
+        <div class="doctor-card" data-category="pediatrics">
+          <div>
+            <div class="doctor-header">
+              <div class="doctor-avatar">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3>Dr. Keight Arren Anacan</h3>
+                <span class="doctor-spec">OB-Gynecologist</span>
+              </div>
+            </div>
+
+            <div class="doctor-details">
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Consultation by Appointment</span>
+              </div>
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Women's Health & Prenatal Care</span>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-outline">Book Consultation</a>
+        </div>
+
+        <!-- Doctor 3: Family Medicine -->
+        <div class="doctor-card" data-category="family">
+          <div>
+            <div class="doctor-header">
+              <div class="doctor-avatar">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3>Dr. Martin Medina</h3>
+                <span class="doctor-spec">Family & Community Medicine / Venereologist</span>
+              </div>
+            </div>
+
+            <div class="doctor-details">
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Regular Clinic Schedule</span>
+              </div>
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Primary Care & Special Consultations</span>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-outline">Book Consultation</a>
+        </div>
+
+        <!-- Doctor 4: Radiologist -->
+        <div class="doctor-card" data-category="radiology">
+          <div>
+            <div class="doctor-header">
+              <div class="doctor-avatar">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3>Dr. Charleen Joy Beredo-Colada</h3>
+                <span class="doctor-spec">Radiologist / Sonologist</span>
+              </div>
+            </div>
+
+            <div class="doctor-details">
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Diagnostic Imaging Readings</span>
+              </div>
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Ultrasound & Digital X-Ray Interpretations</span>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-outline">Book Consultation</a>
+        </div>
+
+        <!-- Doctor 5: Radiologist -->
+        <div class="doctor-card" data-category="radiology">
+          <div>
+            <div class="doctor-header">
+              <div class="doctor-avatar">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3>Dr. Roderick Nomorosa</h3>
+                <span class="doctor-spec">Radiologist / Sonologist</span>
+              </div>
+            </div>
+
+            <div class="doctor-details">
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Diagnostic Imaging Readings</span>
+              </div>
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Specialized Diagnostic Imaging</span>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-outline">Book Consultation</a>
+        </div>
+
+        <!-- Doctor 6: Special Consulting -->
+        <div class="doctor-card" data-category="family">
+          <div>
+            <div class="doctor-header">
+              <div class="doctor-avatar">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="doctor-info">
+                <h3>Dr. Gabriel Dominic Rodrigo</h3>
+                <span class="doctor-spec">Special Consulting / Family Medicine</span>
+              </div>
+            </div>
+
+            <div class="doctor-details">
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Special Consulting Hours</span>
+              </div>
+              <div class="detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Comprehensive Family Healthcare</span>
+              </div>
+            </div>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-outline">Book Consultation</a>
+        </div>
+      </div>
+
+      <div class="detail-cta">
+        <h2>Inquire About Specific Schedule Times</h2>
+        <p>Contact our reception desk in Dasmariñas to verify doctor availability and clinic hours.</p>
+        <a class="button button-solid" href="index.html#consultation-sheet">Inquire at Reception</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>JaroMed & Diagnostic Center — Dasmariñas City, Cavite</p>
+    </footer>
+
+    <!-- Category Filter Script -->
+    <script>
+      function filterDoctors(category, btnElement) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        btnElement.classList.add('active');
+
+        const cards = document.querySelectorAll('.doctor-card');
+        cards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

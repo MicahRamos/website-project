@@ -1,0 +1,382 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JaroMed & Diagnostic Center — Advanced Community Health Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      /* Inline override to set jaromed-cover.jpg as the hero background */
+      .hero {
+        background-image:
+          linear-gradient(to top, rgba(5, 7, 11, 0.9) 30%, rgba(5, 7, 11, 0.5)),
+          url("jaromed-cover.jpg");
+      }
+
+      /* Styling for the three slogans in the brand section */
+      .brand-slogans-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .brand-slogan {
+        font-weight: 300;
+        font-size: 1.85rem;
+        margin: 0;
+        text-align: center;
+        text-wrap: balance;
+        color: var(--text-primary);
+      }
+
+      .brand-slogan strong {
+        color: var(--accent);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="logo">
+        <img
+          src="jaromed-symbol.png"
+          alt="JaroMed Logo"
+          style="width: 50px; height: 50px; object-fit: contain;"
+        />
+        <span>
+          JaroMed
+          <strong class="accent">& Diagnostic Center</strong>
+        </span>
+      </div>
+
+      <nav class="nav">
+        <a class="button button-outline" href="about.html">About Us</a>
+        <a class="button button-outline" href="services.html">Services</a>
+        <a class="button button-outline" href="catalog.html">Test Catalog</a>
+        <a class="button button-outline" href="doctors.html">Doctors</a>
+        <a class="button button-outline" href="portal.html">Patient Portal</a>
+        <button
+          class="button plans-button"
+          command="toggle-popover"
+          commandfor="menu"
+        >
+          Specialties
+          <svg viewBox="0 0 320 512" width="12" aria-hidden="true">
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+            />
+          </svg>
+        </button>
+        <!-- Scrolls down to consultation sheet -->
+        <a class="button button-solid" href="#consultation-sheet">
+          Request Consultation
+        </a>
+      </nav>
+
+      <div class="intro">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          Clinical Facility Active
+        </div>
+        <h1>Advanced Community Health Care</h1>
+        <p>
+          Providing comprehensive biomarker panels, digital radiology, and personalized primary care in Dasmariñas with advanced diagnostic precision.
+        </p>
+      </div>
+
+      <div class="invite">
+        <div class="promo">
+          <h2>HMO Affiliates</h2>
+          <p>
+            We proudly accept a wide range of accredited HMO health plans and insurance providers.
+          </p>
+          <a href="hmo.html" class="button button-solid">
+            View HMO List
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown menu items -->
+      <menu id="menu" class="menu" popover>
+        <li><a href="#cardiology-ai">Cardiology & ECG</a></li>
+        <li><a href="#radiology-imaging">Radiology Division</a></li>
+        <li><a href="#biomarker-genomics">Clinical Laboratory</a></li>
+      </menu>
+    </header>
+
+    <!-- BRAND SECTION WITH THREE SLOGANS -->
+    <section class="brand-sentence">
+      <div class="brand-slogans-container">
+        <h2 class="brand-slogan">
+          "Precise Diagnostics & <strong>Compassionate Care</strong>"
+        </h2>
+        <h2 class="brand-slogan">
+          "Healthcare Defined by <strong>Precision & Care</strong>"
+        </h2>
+        <h2 class="brand-slogan">
+          "<strong>Better Care</strong>, Better Lives"
+        </h2>
+      </div>
+    </section>
+
+    <!-- PHOTO CAROUSEL FEATURING REALISTIC LOCAL PATIENT REVIEWS -->
+    <section class="photos-and-quotes" id="photos-and-quotes">
+      <div class="row row-1">
+        <img
+          src="jaromed-front.png"
+          alt="JaroMed Exterior Facade"
+        />
+        <blockquote class="quote">
+          <p>
+            "Very smooth process for my annual physical exam. The medical technologists and staff were gentle and accommodating throughout my blood test."
+          </p>
+
+          <cite>
+            <svg viewBox="0 0 496 512" width="100" class="avatar">
+              <path
+                d="M0 256c0 137 111 248 248 248s248-111 248-248S385 8 248 8 0 119 0 256zm200-48c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm168 25l-9.5-8.5c-14.8-13.2-46.2-13.2-61 0L288 233c-8.3 7.4-21.6.4-19.8-10.8 4-25.2 34.2-42.1 59.9-42.1S384 197 388 222.2c1.6 11-11.5 18.2-20 10.8zm-243.1 87.8C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.3-3.7 22.6 6 20.7 17.9-9.2 55-83.2 93.3-143.8 93.3s-134.5-38.3-143.8-93.3c-2-11.9 9.3-21.6 20.7-17.9z"
+              />
+            </svg>
+            <div>
+              <div class="name">Maria D.</div>
+              <div>Verified Patient — Dasmariñas</div>
+            </div>
+          </cite>
+        </blockquote>
+        <img
+          src="jaromed-executive-lounge.jpg"
+          alt="JaroMed Executive Lounge"
+        />
+        <blockquote class="quote">
+          <p>
+            "Clean facilities, accessible location along Aguinaldo Highway, and fast turnaround time for lab results. Highly recommended clinic in Cavite!"
+          </p>
+
+          <cite>
+            <svg viewBox="0 0 496 512" width="100" class="avatar">
+              <path
+                d="M0 256c0 137 111 248 248 248s248-111 248-248S385 8 248 8 0 119 0 256zm200-48c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm168 25l-9.5-8.5c-14.8-13.2-46.2-13.2-61 0L288 233c-8.3 7.4-21.6.4-19.8-10.8 4-25.2 34.2-42.1 59.9-42.1S384 197 388 222.2c1.6 11-11.5 18.2-20 10.8zm-243.1 87.8C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.3-3.7 22.6 6 20.7 17.9-9.2 55-83.2 93.3-143.8 93.3s-134.5-38.3-143.8-93.3c-2-11.9 9.3-21.6 20.7-17.9z"
+              />
+            </svg>
+            <div>
+              <div class="name">Jonathan K.</div>
+              <div>Primary Care Patient</div>
+            </div>
+          </cite>
+        </blockquote>
+      </div>
+
+      <div class="row row-2">
+        <img
+          src="jaromed-reception.jpg"
+          alt="JaroMed Reception Counter"
+        />
+        <blockquote class="quote">
+          <p>
+            "I received my laboratory and X-ray results faster than expected. The clinic is clean, well-maintained, and very organized."
+          </p>
+
+          <cite>
+            <svg viewBox="0 0 496 512" width="100" class="avatar">
+              <path
+                d="M0 256c0 137 111 248 248 248s248-111 248-248S385 8 248 8 0 119 0 256zm200-48c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm168 25l-9.5-8.5c-14.8-13.2-46.2-13.2-61 0L288 233c-8.3 7.4-21.6.4-19.8-10.8 4-25.2 34.2-42.1 59.9-42.1S384 197 388 222.2c1.6 11-11.5 18.2-20 10.8zm-243.1 87.8C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.3-3.7 22.6 6 20.7 17.9-9.2 55-83.2 93.3-143.8 93.3s-134.5-38.3-143.8-93.3c-2-11.9 9.3-21.6 20.7-17.9z"
+              />
+            </svg>
+            <div>
+              <div class="name">Ramon S.</div>
+              <div>Outpatient Diagnostic Care</div>
+            </div>
+          </cite>
+        </blockquote>
+        <img
+          src="jaromed-waiting-room.jpg"
+          alt="JaroMed Patient Waiting Lounge"
+        />
+        <blockquote class="quote">
+          <p>
+            "Hassle-free transaction using my HMO approval. Comfortable waiting lounge and polite staff at the front desk."
+          </p>
+
+          <cite>
+            <svg viewBox="0 0 496 512" width="100" class="avatar">
+              <path
+                d="M0 256c0 137 111 248 248 248s248-111 248-248S385 8 248 8 0 119 0 256zm200-48c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zm168 25l-9.5-8.5c-14.8-13.2-46.2-13.2-61 0L288 233c-8.3 7.4-21.6.4-19.8-10.8 4-25.2 34.2-42.1 59.9-42.1S384 197 388 222.2c1.6 11-11.5 18.2-20 10.8zm-243.1 87.8C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.3-3.7 22.6 6 20.7 17.9-9.2 55-83.2 93.3-143.8 93.3s-134.5-38.3-143.8-93.3c-2-11.9 9.3-21.6 20.7-17.9z"
+              />
+            </svg>
+            <div>
+              <div class="name">Patricia C.</div>
+              <div>HMO Member</div>
+            </div>
+          </cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CORE DIAGNOSTIC SPECIALTIES SECTION -->
+    <section class="specialties-info-section">
+      <div class="specialties-container">
+        <h2>JaroMed Diagnostic Services</h2>
+        <p class="section-subtitle">
+          Explore our primary care divisions and specialized diagnostic services.
+        </p>
+
+        <!-- Specialty 1: Cardiology AI -->
+        <div class="specialty-card" id="cardiology-ai">
+          <div class="specialty-content">
+            <span class="specialty-tag">Cardiology</span>
+            <h3>Cardiology & ECG Diagnostics</h3>
+            <p>
+              12-lead digital electrocardiograms, ambulatory heart rhythm monitoring, and cardiovascular wellness evaluations interpreted by expert cardiologists.
+            </p>
+            <a href="cardiology.html" class="link-btn">Explore Cardiology →</a>
+          </div>
+          <div class="specialty-image-wrapper">
+            <img
+              src="jaromed-frontdesk.jpg"
+              alt="JaroMed Consultation Area"
+            />
+          </div>
+        </div>
+
+        <!-- Specialty 2: Radiology & Imaging -->
+        <div class="specialty-card" id="radiology-imaging">
+          <div class="specialty-content">
+            <span class="specialty-tag">Radiology</span>
+            <h3>Radiology & Medical Imaging</h3>
+            <p>
+              State-of-the-art digital X-rays, ultrasound imaging, and diagnostic scans providing rapid and accurate clinical reporting.
+            </p>
+            <a href="radiology.html" class="link-btn">Explore Radiology →</a>
+          </div>
+          <div class="specialty-image-wrapper">
+            <img
+              src="jaromed-radiology.jpg"
+              alt="JaroMed Radiology Department"
+            />
+          </div>
+        </div>
+
+        <!-- Specialty 3: Biomarker Genomics -->
+        <div class="specialty-card" id="biomarker-genomics">
+          <div class="specialty-content">
+            <span class="specialty-tag">Laboratory</span>
+            <h3>Comprehensive Biomarker Panels</h3>
+            <p>
+              Full clinical laboratory testing covering metabolic panels, lipid profiles, hormonal assays, and routine blood diagnostics.
+            </p>
+            <a href="genomics.html" class="link-btn">Explore Laboratory →</a>
+          </div>
+          <div class="specialty-image-wrapper">
+            <img
+              src="jaromed-laboratory.jpg"
+              alt="JaroMed Laboratory Department"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION SHEET -->
+    <section class="consultation-section" id="consultation-sheet">
+      <div class="consultation-card">
+        <div class="consultation-header">
+          <h2>Clinical Consultation Request</h2>
+          <p>
+            Please provide your information below to schedule your clinic visit or diagnostic intake session.
+          </p>
+        </div>
+
+        <form
+          id="consultation-form"
+          class="consultation-form"
+          onsubmit="handleFormSubmit(event)"
+        >
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              placeholder="e.g. Maria Santos"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="maria@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+63 912 345 6789"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location / Preferred Branch</label>
+              <input
+                type="text"
+                id="location"
+                placeholder="e.g. Dasmariñas, Cavite"
+                required
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="button button-solid submit-consultation-btn"
+          >
+            Submit Consultation Request
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <img
+        src="jaromed-front.png"
+        alt="JaroMed Facility Exterior"
+      />
+      <img
+        src="jaromed-reception.jpg"
+        alt="JaroMed Reception Area"
+      />
+      <p>JaroMed & Diagnostic Center — Dasmariñas, Cavite</p>
+    </footer>
+
+    <!-- Form Reset Script Handler -->
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        alert('Consultation request submitted successfully! We will contact you shortly.');
+        document.getElementById('consultation-form').reset();
+      }
+    </script>
+  </body>
+</html>

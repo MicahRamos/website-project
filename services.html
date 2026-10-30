@@ -1,0 +1,199 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services — JaroMed & Diagnostic Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.75rem;
+        margin: 2.5rem 0 4rem;
+      }
+
+      .service-card-main {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(12px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .service-card-main:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+
+      .service-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        width: fit-content;
+      }
+
+      .service-card-main h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .service-card-main p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.75rem;
+      }
+
+      .service-features li {
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .service-features li::before {
+        content: "✓";
+        color: var(--accent);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Header -->
+    <header class="page-nav">
+      <div class="logo">
+        <img
+          src="jaromed-symbol.png"
+          alt="JaroMed Logo"
+          style="width: 32px; height: 32px; object-fit: contain;"
+        />
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+          <span>JaroMed<strong class="accent">& Diagnostic Center</strong></span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a class="button button-outline" href="index.html">← Back to Home</a>
+        <a class="button button-outline" href="catalog.html">Full Test Catalog</a>
+        <a class="button button-solid" href="portal.html">Patient Portal</a>
+      </nav>
+    </header>
+
+    <main class="specialty-detail-container">
+      <div class="detail-header">
+        <span class="specialty-tag">Core Offerings</span>
+        <h1>Clinical Services & Screening Packages</h1>
+        <p class="lead-text">
+          Explore our premier health screening programs, pre-employment accreditation packages, and specialized diagnostic divisions in Dasmariñas City.
+        </p>
+      </div>
+
+      <!-- Core Services Grid -->
+      <div class="services-grid">
+        <!-- Service 1: Executive Checkup -->
+        <div class="service-card-main">
+          <div>
+            <span class="service-badge">ECU</span>
+            <h3>Executive Checkup</h3>
+            <p>
+              Comprehensive lifestyle-based health screenings and preventative wellness assessments tailored for individuals and executives.
+            </p>
+            <ul class="service-features">
+              <li>Complete Biomarker Panel</li>
+              <li>Vital Organ Diagnostics</li>
+              <li>Physician Consultation & Evaluation</li>
+            </ul>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-solid">Schedule Assessment</a>
+        </div>
+
+        <!-- Service 2: Pre-Employment Medical Exam -->
+        <div class="service-card-main">
+          <div>
+            <span class="service-badge">PEME</span>
+            <h3>Pre-Employment Exams</h3>
+            <p>
+              Accredited medical examinations and diagnostic packages tailored for corporate, local, and overseas employment clearances.
+            </p>
+            <ul class="service-features">
+              <li>Chest X-Ray & Physical Exam</li>
+              <li>Complete Blood Count & Urine Screening</li>
+              <li>Drug Testing (Urine)</li>
+            </ul>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-solid">Book Corporate Exam</a>
+        </div>
+
+        <!-- Service 3: Laboratory Diagnostic Testing -->
+        <div class="service-card-main">
+          <div>
+            <span class="service-badge">LAB</span>
+            <h3>Laboratory Department</h3>
+            <p>
+              High-precision clinical pathology covering hematology, blood chemistry, immunology, and metabolic health indicators.
+            </p>
+            <ul class="service-features">
+              <li>Fast & Digital Results Delivery</li>
+              <li>Lipid, Glucose & Thyroid Panels</li>
+              <li>Hepatitis & Serology Profiling</li>
+            </ul>
+          </div>
+          <a href="catalog.html" class="button button-outline">Browse Test Catalog →</a>
+        </div>
+
+        <!-- Service 4: Digital Radiology & X-Ray -->
+        <div class="service-card-main">
+          <div>
+            <span class="service-badge">XR</span>
+            <h3>Digital Radiology</h3>
+            <p>
+              High-resolution digital imaging with low radiation exposure, delivering quick, accurate radiological interpretations.
+            </p>
+            <ul class="service-features">
+              <li>Chest & Skeletal X-Ray Imaging</li>
+              <li>Ultrasound Scanning Services</li>
+              <li>Certified Radiologist Interpretations</li>
+            </ul>
+          </div>
+          <a href="index.html#consultation-sheet" class="button button-solid">Request Radiology Scan</a>
+        </div>
+      </div>
+
+      <div class="detail-cta">
+        <h2>Need a Custom Medical Procedure?</h2>
+        <p>Check our full diagnostic procedure list or speak with our clinic reception desk directly.</p>
+        <a class="button button-solid" href="catalog.html">View Test Catalog</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>JaroMed & Diagnostic Center — Dasmariñas City, Cavite</p>
+    </footer>
+  </body>
+</html>

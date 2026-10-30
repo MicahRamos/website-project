@@ -1,0 +1,235 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procedure Catalog — JaroMed & Diagnostic Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .catalog-tabs {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0 3rem;
+      }
+
+      .catalog-tab-btn {
+        padding: 0.65rem 1.25rem;
+        border: 1px solid var(--surface-border);
+        background: var(--surface);
+        color: var(--text-secondary);
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .catalog-tab-btn.active,
+      .catalog-tab-btn:hover {
+        background: var(--accent);
+        color: #05070b;
+        border-color: var(--accent);
+      }
+
+      .catalog-section {
+        display: none;
+        margin-bottom: 4rem;
+      }
+
+      .catalog-section.active {
+        display: block;
+      }
+
+      .subgroup-title {
+        color: var(--accent);
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--surface-border);
+      }
+
+      .test-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+
+      .test-item {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .test-item::before {
+        content: "•";
+        color: var(--accent);
+        font-size: 1.5rem;
+        line-height: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Header -->
+    <header class="page-nav">
+      <div class="logo">
+        <img
+          src="jaromed-symbol.png"
+          alt="JaroMed Logo"
+          style="width: 32px; height: 32px; object-fit: contain;"
+        />
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+          <span>JaroMed<strong class="accent">& Diagnostic Center</strong></span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a class="button button-outline" href="index.html">← Back to Home</a>
+        <a class="button button-outline" href="services.html">Services Overview</a>
+        <a class="button button-solid" href="portal.html">Patient Portal</a>
+      </nav>
+    </header>
+
+    <main class="specialty-detail-container">
+      <div class="detail-header">
+        <span class="specialty-tag">Comprehensive Procedures</span>
+        <h1>Diagnostic Test Catalog</h1>
+        <p class="lead-text">
+          Browse our complete list of clinical laboratory tests, digital X-ray procedures, ultrasound scans, and cardiac diagnostic procedures.
+        </p>
+      </div>
+
+      <!-- Department Category Filter -->
+      <div class="catalog-tabs">
+        <button class="catalog-tab-btn active" onclick="showCategory('lab', this)">Laboratory Department</button>
+        <button class="catalog-tab-btn" onclick="showCategory('xray', this)">X-Ray Department</button>
+        <button class="catalog-tab-btn" onclick="showCategory('ultrasound', this)">Ultrasound Services</button>
+        <button class="catalog-tab-btn" onclick="showCategory('cardiology', this)">Cardiology & Others</button>
+      </div>
+
+      <!-- 1. LABORATORY DEPARTMENT -->
+      <div id="cat-lab" class="catalog-section active">
+        <h3 class="subgroup-title">Hematology</h3>
+        <div class="test-grid">
+          <div class="test-item">Complete Blood Count (CBC)</div>
+          <div class="test-item">CBC w/ Platelet Count</div>
+          <div class="test-item">CBC w/ RBC Indices</div>
+          <div class="test-item">Blood Typing (ABO/Rh)</div>
+          <div class="test-item">APTT</div>
+          <div class="test-item">Bleeding Time / Clotting Time</div>
+          <div class="test-item">Erythrocyte Sedimentation Rate (ESR)</div>
+          <div class="test-item">Malarial Smear Screening</div>
+        </div>
+
+        <h3 class="subgroup-title">Clinical Microscopy</h3>
+        <div class="test-grid">
+          <div class="test-item">Routine Urinalysis</div>
+          <div class="test-item">Routine Fecalysis</div>
+          <div class="test-item">Occult Blood Test</div>
+          <div class="test-item">Microalbumin Test</div>
+          <div class="test-item">Pregnancy Test (Urine & Serum)</div>
+        </div>
+
+        <h3 class="subgroup-title">Serology & Immunology</h3>
+        <div class="test-grid">
+          <div class="test-item">Rubella IgM</div>
+          <div class="test-item">TPHA Screening</div>
+          <div class="test-item">Typhidot Test</div>
+          <div class="test-item">VDRL / RPR (Syphilis)</div>
+          <div class="test-item">Widal Test</div>
+        </div>
+
+        <h3 class="subgroup-title">Thyroid Function Assays</h3>
+        <div class="test-grid">
+          <div class="test-item">FT3 (Elisa)</div>
+          <div class="test-item">FT4 (Elisa)</div>
+          <div class="test-item">TSH (Elisa)</div>
+          <div class="test-item">T3 & T4 (Elisa)</div>
+          <div class="test-item">Thyroglobulin / Anti-Thyroglobulin</div>
+        </div>
+
+        <h3 class="subgroup-title">Drug & Hepatitis Profiling</h3>
+        <div class="test-grid">
+          <div class="test-item">Drug Screening (Urine)</div>
+          <div class="test-item">HBsAg Screening & Titer</div>
+          <div class="test-item">Anti-HAV IgG / IgM</div>
+          <div class="test-item">Anti-HBc IgG</div>
+          <div class="test-item">Anti-HCV Screening</div>
+          <div class="test-item">Complete Hepatitis A, B & C Profiles</div>
+        </div>
+      </div>
+
+      <!-- 2. X-RAY DEPARTMENT -->
+      <div id="cat-xray" class="catalog-section">
+        <h3 class="subgroup-title">Digital Radiography</h3>
+        <div class="test-grid">
+          <div class="test-item">Chest X-Ray (PA / Lateral)</div>
+          <div class="test-item">Thoracic & Lumbar Spine Series</div>
+          <div class="test-item">Abdominal X-Ray Series</div>
+          <div class="test-item">Skeletal & Extremities Radiography</div>
+          <div class="test-item">Paranasal Sinuses Series</div>
+        </div>
+      </div>
+
+      <!-- 3. ULTRASOUND SERVICES -->
+      <div id="cat-ultrasound" class="catalog-section">
+        <h3 class="subgroup-title">Diagnostic Ultrasound Imaging</h3>
+        <div class="test-grid">
+          <div class="test-item">Whole Abdomen Ultrasound</div>
+          <div class="test-item">Upper / Lower Abdomen Ultrasound</div>
+          <div class="test-item">Pelvic & Obstetrical Ultrasound</div>
+          <div class="test-item">Thyroid & Soft Tissue Scans</div>
+          <div class="test-item">Kidney, Ureter & Bladder (KUB)</div>
+        </div>
+      </div>
+
+      <!-- 4. CARDIOLOGY & OTHERS -->
+      <div id="cat-cardiology" class="catalog-section">
+        <h3 class="subgroup-title">Cardiology & Clinical Special Procedures</h3>
+        <div class="test-grid">
+          <div class="test-item">12-Lead Electrocardiogram (ECG)</div>
+          <div class="test-item">2D Echo with Doppler</div>
+          <div class="test-item">Ambulatory BP / Heart Rhythm Monitoring</div>
+          <div class="test-item">Cardiovascular Medical Clearances</div>
+        </div>
+      </div>
+
+      <div class="detail-cta">
+        <h2>Schedule Your Diagnostic Test</h2>
+        <p>Book your test appointment or visit our clinic directly along Aguinaldo Highway, Dasmariñas City.</p>
+        <a class="button button-solid" href="index.html#consultation-sheet">Request Intake Appointment</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>JaroMed & Diagnostic Center — Dasmariñas City, Cavite</p>
+    </footer>
+
+    <!-- Tab Switching Script -->
+    <script>
+      function showCategory(catId, btnEl) {
+        document.querySelectorAll('.catalog-tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.catalog-section').forEach(sec => sec.classList.remove('active'));
+
+        btnEl.classList.add('active');
+        document.getElementById('cat-' + catId).classList.add('active');
+      }
+    </script>
+  </body>
+</html>

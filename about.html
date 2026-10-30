@@ -1,0 +1,187 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — JaroMed & Diagnostic Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .story-section {
+        background: var(--surface);
+        border: 1px solid var(--surface-border);
+        border-radius: 20px;
+        padding: 2.5rem;
+        margin: 3rem 0;
+        backdrop-filter: blur(12px);
+      }
+
+      .story-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .story-section p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .story-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .value-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--surface-border);
+        border-radius: 16px;
+        padding: 1.75rem;
+      }
+
+      .value-card h3 {
+        color: var(--accent);
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .value-card p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Navigation -->
+    <header class="page-nav">
+      <div class="logo">
+        <img
+          src="jaromed-symbol.png"
+          alt="JaroMed Logo"
+          style="width: 32px; height: 32px; object-fit: contain;"
+        />
+        <a href="index.html" style="color: inherit; text-decoration: none;">
+          <span>JaroMed<strong class="accent">& Diagnostic Center</strong></span>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a class="button button-outline" href="index.html">← Back to Home</a>
+        <a class="button button-solid" href="portal.html">Patient Portal</a>
+      </nav>
+    </header>
+
+    <main class="specialty-detail-container">
+      <div class="detail-header">
+        <span class="specialty-tag">Our Center</span>
+        <h1>Dedicated to Precision Healthcare</h1>
+        <p class="lead-text">
+          JaroMed & Diagnostic Center delivers trusted primary care, digital imaging, and comprehensive clinical laboratory services in Dasmariñas, Cavite.
+        </p>
+      </div>
+
+      <!-- Facility Hero Banner -->
+      <div class="detail-hero-image">
+        <img src="jaromed-front.png" alt="JaroMed Facility Front" />
+      </div>
+
+      <!-- Extended Foundation Story -->
+      <section class="story-section">
+        <h2>Our Founding Story</h2>
+        <p>
+          JaroMed & Diagnostic Center was established with a singular mission: to bridge the gap between high-precision clinical diagnostics and compassionate, community-focused patient care in Dasmariñas, Cavite. Recognized for long queues and delayed laboratory turnarounds in regional facilities, our founders set out to build an accessible, modern clinic environment where medical technology and patient comfort coexist seamlessly.
+        </p>
+        <p>
+          Starting as an outpatient diagnostic testing center, JaroMed grew rapidly by integrating state-of-the-art laboratory analyzers, digital electrocardiograms, and low-dose X-ray technology. Today, JaroMed serves thousands of patients annually across Cavite—ranging from routine pre-employment physical exams and corporate wellness screenings to outpatient specialty consultations and accredited HMO coverage.
+        </p>
+      </section>
+
+      <!-- Mission & Core Commitments -->
+      <section style="margin: 3rem 0;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Our Core Commitments</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>Diagnostic Accuracy</h3>
+            <p>
+              Every blood panel, digital radiograph, and cardiac tracer is subjected to rigorous quality controls and interpreted by certified medical technologists and specialists.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>Rapid Turnaround</h3>
+            <p>
+              We prioritize fast, accurate result processing—delivering digital medical reports directly through our patient portal to streamline clinical decision-making.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <h3>Accessible Healthcare</h3>
+            <p>
+              Partnering with major HMO providers and insurance institutions ensures cashless transactions, transparent pricing, and accessible healthcare for all families in Cavite.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facility Feature Cards -->
+      <section class="detail-grid">
+        <div class="detail-card">
+          <h3>Advanced Laboratory Equipment</h3>
+          <p>
+            Equipped with automated clinical chemistry, hematology, and immunology systems to deliver dependable metabolic panels and hormone testing.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Patient-Centered Staff</h3>
+          <p>
+            Our licensed medical staff, radiologic technologists, and primary care physicians provide gentle, attentive care during every diagnostic visit.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <h3>Modern Executive Facilities</h3>
+          <p>
+            Designed with air-conditioned waiting lounges, private consultation rooms, and comfortable extraction stations to ensure a stress-free environment.
+          </p>
+        </div>
+      </section>
+
+      <!-- Center Photo Gallery -->
+      <section style="margin: 4rem 0;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Inside Our Center</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <img src="jaromed-reception.jpg" alt="Reception Desk" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; border: 1px solid var(--surface-border);" />
+          <img src="jaromed-executive-lounge.jpg" alt="Executive Lounge" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; border: 1px solid var(--surface-border);" />
+          <img src="jaromed-waiting-room.jpg" alt="Waiting Area" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; border: 1px solid var(--surface-border);" />
+        </div>
+      </section>
+
+      <div class="detail-cta">
+        <h2>Schedule a Visit or Test</h2>
+        <p>Book your diagnostic panel or request a consultation online today.</p>
+        <a class="button button-solid" href="index.html#consultation-sheet">Request Consultation</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>JaroMed & Diagnostic Center — Dasmariñas, Cavite</p>
+    </footer>
+  </body>
+</html>
