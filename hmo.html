@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiliated HMO's | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+  <style>
+    .hmo-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .hmo-logo-card {
+      background: var(--bg-dark);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 1rem;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+    .hmo-logo-card:hover {
+      border-color: var(--accent);
+    }
+    .hmo-logo-card img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      filter: brightness(1.1);
+    }
+    .hmo-logo-card span {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 40px; height: 40px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Insurance Coverage</span>
+      <h1>Affiliated HMO's</h1>
+      <p class="lead-text">We partner with leading Health Maintenance Organizations (HMOs) and health insurance providers to give you seamless diagnostic care access.</p>
+    </div>
+
+    <div class="detail-card" style="margin-bottom: 3rem;">
+      <h3>Accredited Partners Directory</h3>
+      <div class="hmo-logo-grid">
+        <div class="hmo-logo-card"><img src="assets/images/amaphil.webp" alt="AMAPHIL" style="transform: scale(1.8);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">AMAPHIL</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/benlife.webp" alt="BenLife" style="transform: scale(1.8);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">BenLife</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/lacson.webp" alt="Lacson & Lacson" style="transform: scale(1.6);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Lacson & Lacson</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/medocare.webp" alt="MEDOCare" style="transform: scale(2.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">MEDOCare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/mi-healthcare.webp" alt="MI Healthcare" style="transform: scale(2.9);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">MI Healthcare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/cocolife.webp" alt="Cocolife" style="transform: scale(2.9);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Cocolife</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/medasia.webp" alt="MedAsia" style="transform: scale(1.5);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">MedAsia</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/eastwest.webp" alt="EastWest Healthcare" style="transform: scale(1.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">EastWest Healthcare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/philcare.webp" alt="PhilCare" style="transform: scale(1.6);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">PhilCare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/valucare.webp" alt="ValuCare" style="transform: scale(1.6);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">ValuCare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/hmi.webp" alt="HMI" style="transform: scale(1.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">HMI</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/etiqa.webp" alt="Etiqa" style="transform: scale(2.5);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Etiqa</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/sunlife.webp" alt="Sun Life GREPA" style="transform: scale(2.0);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Sun Life GREPA</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/hppi.webp" alt="HPPI" style="transform: scale(1.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">HPPI</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/inlife.webp" alt="InLife" style="transform: scale(1.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">InLife</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/generali.webp" alt="Generali" style="transform: scale(2.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Generali</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/wellcare.webp" alt="WellCare" style="transform: scale(1.8);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">WellCare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/ims.webp" alt="Ims Wealth Care" style="transform: scale(2.5);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Ims Wealth Care</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/lifehealth.webp" alt="Life & Health" style="transform: scale(1.6);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Life & Health</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/carewell.webp" alt="Carewell" style="transform: scale(1.5);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Carewell</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/pacificcross.webp" alt="Pacific Cross" style="transform: scale(1.5);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Pacific Cross</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/maxicare.webp" alt="Maxicare" style="transform: scale(1.4);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Maxicare</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/medicard.webp" alt="Medicard" style="transform: scale(1.7);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Medicard</span></div>
+        <div class="hmo-logo-card"><img src="assets/images/intellicare.webp" alt="Intellicare" style="transform: scale(1.3);" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span style="display:none;">Intellicare</span></div>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Letter of Authorization (LOA)</h3>
+        <p>Present your valid HMO card and government-issued ID at our front desk to assist you in securing your electronic LOA approval.</p>
+      </div>
+      <div class="detail-card">
+        <h3>More Information & Inquiries</h3>
+        <p style="margin-bottom: 0.5rem;"><strong>Globe:</strong> +63 926 0681 092</p>
+        <p style="margin-bottom: 0.5rem;"><strong>Smart:</strong> +63 968 6710 599</p>
+        <p><strong>Website:</strong> www.jaromed.com.ph</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Consult Your Doctor</h2>
+      <p>Schedule your HMO diagnostic visit or submit your consultation inquiry online.</p>
+      <a href="index.html#consultation-sheet" class="button button-solid">Schedule Visit</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>

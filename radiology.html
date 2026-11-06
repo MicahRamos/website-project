@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiology Services | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 50px; height: 50px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Imaging Center</span>
+      <h1>Digital Radiology & Ultrasound</h1>
+      <p class="lead-text">High-resolution medical imaging platforms engineered for ultra-low radiation exposure and rapid radiological interpretations.</p>
+    </div>
+
+    <div class="detail-hero-image">
+      <img src="assets/images/jaromed-radiology.webp" alt="Radiology Equipment">
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Digital X-Ray Radiography</h3>
+        <p>Instant filmless digital radiography providing clear chest, skeletal, and abdominal imaging with minimal radiation dosage.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Comprehensive Ultrasound</h3>
+        <p>Advanced 3D/4D ultrasound suites for obstetrics, pelvic scans, thyroid screenings, and vascular Doppler examinations.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Teleradiology Reporting</h3>
+        <p>Secure digital image transmission enabling prompt, expert-verified specialist readings within hours of test execution.</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Book a Radiology Procedure</h2>
+      <p>Schedule your imaging scans conveniently with our quick online appointment form.</p>
+      <a href="index.html#consultation" class="button button-solid">Schedule Appointment</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>

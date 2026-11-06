@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Catalog | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 50px; height: 50px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Laboratory Directory</span>
+      <h1>Diagnostic Test Catalog</h1>
+      <p class="lead-text">Explore our full selection of clinical laboratory, radiology, and outpatient diagnostic procedures.</p>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Hematology & Microscopy</h3>
+        <p>Complete Blood Count (CBC) with Platelets, Blood Typing, Urinalysis, Fecalysis, and Peripheral Blood Smear.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Clinical Chemistry</h3>
+        <p>Fasting Blood Sugar (FBS), HbA1c, Lipid Profile, Uric Acid, BUN, Creatinine, Liver Function Tests (SGPT/SGOT).</p>
+      </div>
+      <div class="detail-card">
+        <h3>Serology & Immunology</h3>
+        <p>Hepatitis B Screening (HBsAg), Thyroid Panel (T3, T4, TSH), Dengue NS1/IgG/IgM, and Covid-19 Antigen/RT-PCR.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Imaging & Digital X-Ray</h3>
+        <p>Chest X-Ray (PA View), Skeletal Radiography, Abdominal Ultrasound, Pelvic Ultrasound, and Thyroid Ultrasound.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Cardiology Tests</h3>
+        <p>Standard 12-Lead Electrocardiogram (ECG) with formal medical report interpretation.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Pre-Employment Packages</h3>
+        <p>Complete medical checkup packages including Physical Examination, CBC, Urinalysis, Chest X-Ray, and Drug Testing.</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Inquire About Test Requirements</h2>
+      <p>Have questions regarding fasting guidelines or test pricing? Contact our laboratory desk.</p>
+      <a href="index.html#consultation-sheet" class="button button-solid">Inquire Online</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>

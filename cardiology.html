@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardiology Services | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 50px; height: 50px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Cardiovascular Care</span>
+      <h1>Cardiology & ECG Diagnostics</h1>
+      <p class="lead-text">Advanced cardiac monitoring and cardiovascular health assessments interpreted by experienced cardiologists.</p>
+    </div>
+
+    <div class="detail-hero-image">
+      <img src="assets/images/jaromed-frontdesk.webp" alt="Cardiology Consultation Area">
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>12-Lead Electrocardiogram (ECG)</h3>
+        <p>Rapid, non-invasive electrical heart rhythm recording for evaluating arrhythmias, ischemia, and routine health checks.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Cardiovascular Screening</h3>
+        <p>Comprehensive evaluations covering blood pressure monitoring, cardiac risk factors, and blood lipid profiling.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Physician Interpretation</h3>
+        <p>All ECG tracings and cardiac diagnostic reports are reviewed and verified by licensed specialist cardiologists.</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Schedule a Cardiac Test</h2>
+      <p>Ensure your heart health with our accessible cardiology diagnostic services.</p>
+      <a href="index.html#consultation-sheet" class="button button-solid">Book Appointment</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>

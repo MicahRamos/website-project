@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 50px; height: 50px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Medical Staff</span>
+      <h1>Our Specialist Physicians</h1>
+      <p class="lead-text">Dedicated medical specialists delivering comprehensive primary care and expert diagnostic interpretations.</p>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Internal Medicine & Primary Care</h3>
+        <p>Evaluation and management of acute adult illnesses, hypertension, diabetes mellitus, and chronic health conditions.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Consultant Radiologists</h3>
+        <p>Board-certified radiologists providing precise interpretations for digital X-rays, ultrasound scans, and diagnostic imaging.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Clinical Pathologists</h3>
+        <p>Overseeing laboratory quality control systems, blood chemistry analysis, and advanced biomarker validations.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Cardiologists</h3>
+        <p>Specialists in cardiovascular health, heart disease prevention, and 12-lead ECG diagnostic evaluations.</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Book a Doctor Consultation</h2>
+      <p>Schedule an appointment or inquire about physician clinic hours in Dasmariñas.</p>
+      <a href="index.html#consultation-sheet" class="button button-solid">Schedule Consultation</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>

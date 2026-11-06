@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Exclude portal login and submission processing from crawlers
+Disallow: /portal.html
+
+Sitemap: https://www.jaromed.com.ph/sitemap.xml

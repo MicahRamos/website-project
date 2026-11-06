@@ -1,0 +1,17 @@
+# JaroMed & Diagnostic Center
+
+> JaroMed & Diagnostic Center is a primary healthcare and multi-specialty outpatient diagnostic clinic located in Dasmariñas, Cavite, Philippines.
+
+## Main Navigation
+- [Home](https://www.jaromed.com.ph/index.html): Primary landing page with consultation intake.
+- [About Us](https://www.jaromed.com.ph/about.html): History, clinical leadership, and mission statement.
+- [Services](https://www.jaromed.com.ph/services.html): Overview of outpatient and laboratory services.
+- [Test Catalog](https://www.jaromed.com.ph/catalog.html): Comprehensive diagnostic test directory.
+- [Our Doctors](https://www.jaromed.com.ph/doctors.html): Attending specialist directory.
+- [HMO Affiliates](https://www.jaromed.com.ph/hmo.html): Accredited HMO partners and LOA guidelines.
+- [Patient Portal](https://www.jaromed.com.ph/portal.html): Online portal for login, signup, and guest requests.
+
+## Specialties
+- [Cardiology](https://www.jaromed.com.ph/cardiology.html): 12-lead ECG, Holter monitoring, and vascular stress tests.
+- [Radiology](https://www.jaromed.com.ph/radiology.html): Filmless digital X-ray and 3D/4D ultrasound imaging.
+- [Genomics](https://www.jaromed.com.ph/genomics.html): Molecular testing, hereditary panels, and biomarker profiling.

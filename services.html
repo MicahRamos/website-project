@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 50px; height: 50px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Comprehensive Care</span>
+      <h1>Our Medical & Diagnostic Services</h1>
+      <p class="lead-text">From primary consultations to advanced laboratory diagnostics, explore our full spectrum of healthcare offerings.</p>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Primary Medical Consultations</h3>
+        <p>Walk-in and scheduled medical consultations for acute illnesses, routine check-ups, and chronic disease management.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Clinical Laboratory Services</h3>
+        <p>Full-service pathology laboratory offering hematology, clinical microscopy, blood chemistry, and immunology panels.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Radiology & Digital X-Ray</h3>
+        <p>Low-dose digital radiography for pulmonary, orthopedic, and routine pre-employment physical screening.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Cardiology & ECG Tests</h3>
+        <p>12-Lead Electrocardiograms and cardiovascular wellness assessments interpreted by licensed cardiologists.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Annual Physical Examination (APE)</h3>
+        <p>Tailored corporate and individual annual physical packages designed to fulfill occupational health requirements.</p>
+      </div>
+      <div class="detail-card">
+        <h3>HMO & Insurance Processing</h3>
+        <p>Hassle-free letter of authorization (LOA) acceptance and streamlined diagnostic coverage handling.</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Ready to Request a Service?</h2>
+      <p>Schedule your diagnostic visit or consultation online with ease.</p>
+      <a href="index.html#consultation-sheet" class="button button-solid">Request Service</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>

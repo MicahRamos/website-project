@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | JaroMed & Diagnostic Center</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="page-nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/jaromed-symbol.webp" alt="JaroMed Logo" style="width: 50px; height: 50px; object-fit: contain;">
+      JaroMed <span class="accent">& Diagnostic Center</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <a href="index.html" class="button button-outline">← Back to Home</a>
+      <select id="themeSelect" onchange="setTheme(this.value)" class="button button-outline" style="cursor: pointer;">
+        <option value="dark" style="background: #0e131f; color: #fff;">Dark Mode</option>
+        <option value="light" style="background: #ffffff; color: #0f172a;">Light Mode</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="specialty-detail-container">
+    <div class="detail-header">
+      <span class="specialty-tag">Our History & Values</span>
+      <h1>About JaroMed & Diagnostic Center</h1>
+      <p class="lead-text">Established to deliver modern, accurate, and accessible healthcare solutions to the community of Dasmariñas, Cavite.</p>
+    </div>
+
+    <div class="detail-hero-image">
+      <img src="assets/images/jaromed-front.webp" alt="JaroMed Facility Exterior">
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-card">
+        <h3>Our Mission</h3>
+        <p>To provide high-precision diagnostic and outpatient medical services through advanced technology, patient-centered care, and clinical excellence.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Our Vision</h3>
+        <p>To stand as Cavite’s leading healthcare provider, setting benchmarks in diagnostic accuracy, compassionate patient experiences, and community wellness.</p>
+      </div>
+      <div class="detail-card">
+        <h3>Quality Assurance</h3>
+        <p>Equipped with standardized clinical pathology automated systems and rigorous quality control protocols for every test run.</p>
+      </div>
+    </div>
+
+    <div class="detail-cta">
+      <h2>Visit Our Facility Today</h2>
+      <p>Experience reliable healthcare services delivered by experienced medical professionals.</p>
+      <a href="index.html#consultation-sheet" class="button button-solid">Request Consultation</a>
+    </div>
+  </main>
+
+  <script>
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('jaromed-theme', theme);
+    }
+
+    (function initTheme() {
+      const savedTheme = localStorage.getItem('jaromed-theme') || 'dark';
+      const selectElem = document.getElementById('themeSelect');
+      if (selectElem) selectElem.value = savedTheme;
+      setTheme(savedTheme);
+    })();
+  </script>
+</body>
+</html>
