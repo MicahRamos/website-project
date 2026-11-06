@@ -1,6 +1,6 @@
 # JaroMed & Diagnostic Center
 
-> JaroMed & Diagnostic Center is a primary healthcare and multi-specialty outpatient diagnostic clinic located in DasmariÒas, Cavite, Philippines.
+> JaroMed & Diagnostic Center is a primary healthcare and multi-specialty outpatient diagnostic clinic located in Dasmari√±as, Cavite, Philippines.
 
 ## Main Navigation
 - [Home](https://www.jaromed.com.ph/index.html): Primary landing page with consultation intake.
